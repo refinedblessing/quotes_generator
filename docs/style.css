@@ -55,7 +55,7 @@ div {
 
 .reset {
   opacity: 0;
-  right: 600;
+  right: 600px;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -71,7 +71,6 @@ button {
   color: white;
   font-size: 15px;
   font-weight: bold;
-  margin-top: 50px;
 }
 
 button:focus {

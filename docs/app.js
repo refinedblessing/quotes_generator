@@ -1,4 +1,4 @@
-$('button').click(function () {
+var loadQuote = function () {
   $('#quote').addClass("reset");
   $('#quote').removeClass("executed");
   $('.author').toggleClass("fade");
@@ -9,9 +9,9 @@ $('button').click(function () {
       dataType: "jsonp"
     })
   }, 1000);
-})
+}
 
-function getQuote(json) {
+var getQuote = function (json) {
   var quote = json[0];
   $("#quote").html(quote.content)
   $(".author").html(quote.title)
@@ -19,3 +19,8 @@ function getQuote(json) {
   $("#quote").addClass("executed");
   $(".author").toggleClass("fade");
 }
+
+$('button').click(function () {
+  loadQuote();
+});
+$(document).ready(loadQuote());
