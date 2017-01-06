@@ -1,4 +1,4 @@
-var loadQuote = function () {
+function loadQuote() {
   $('#quote').addClass("reset");
   $('#quote').removeClass("executed");
   $('.author').toggleClass("fade");
@@ -11,7 +11,7 @@ var loadQuote = function () {
   }, 1000);
 }
 
-var getQuote = function (json) {
+function getQuote(json) {
   var quote = json[0];
   $("#quote").html(quote.content)
   $(".author").html(quote.title)
@@ -20,7 +20,5 @@ var getQuote = function (json) {
   $(".author").toggleClass("fade");
 }
 
-$('button').click(function () {
-  loadQuote();
-});
+$('button').click(loadQuote)
 $(document).ready(loadQuote());
