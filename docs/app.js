@@ -5,7 +5,7 @@ function loadQuote() {
   setTimeout(function () {
     $.ajax({
       crossOrigin: true,
-      url: "https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=getQuote",
+      url: "https://quotesondesign.com/wp-json/wp/v2/posts/?filter[orderby]=rand&filter[posts_per_page]=1&_jsonp=getQuote",
       dataType: "jsonp"
     })
   }, 1000);
